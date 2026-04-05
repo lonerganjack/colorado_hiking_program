@@ -44,13 +44,17 @@ export function generateSchedule(year) {
   const warmupStart = new Date(year, 3, 1); // April 1
   const weekOneMonday = getMonday(warmupStart);
 
-  // Pair foothills across 8 weeks (16 slots for 10 hikes — repeat easier ones)
+  // Assign foothills across 8 weeks (16 slots), no back-to-back repeats
+  // With 16 hikes sorted by difficulty, assign sequentially — one per slot
   const warmupSlots = [];
   for (let w = 0; w < 8; w++) {
-    // Two hikes per week, gradually increasing difficulty
-    const hikeIndex1 = Math.min(Math.floor(w * 10 / 8), foothills.length - 1);
-    const hikeIndex2 = Math.min(Math.floor((w * 10 / 8) + 1), foothills.length - 1);
-    warmupSlots.push({ week: w, hike1: foothills[hikeIndex1], hike2: foothills[hikeIndex2] });
+    const idx1 = w * 2;
+    const idx2 = w * 2 + 1;
+    warmupSlots.push({
+      week: w,
+      hike1: foothills[Math.min(idx1, foothills.length - 1)],
+      hike2: foothills[Math.min(idx2, foothills.length - 1)]
+    });
   }
 
   for (let w = 0; w < 8; w++) {
@@ -98,7 +102,7 @@ export function generateSchedule(year) {
       {
         day: "Tuesday",
         date: formatDateFull(transTue),
-        workout: convertHikeToTreadmill(foothills[foothills.length - 1]), // hardest foothills
+        workout: convertHikeToTreadmill(foothills[foothills.length - 3]), // hard foothills (not same as week 8)
         isRest: false
       },
       {
@@ -112,10 +116,12 @@ export function generateSchedule(year) {
 
   // Phase 3: 14er Season — Weeks 10-19 (June onward)
   // 1 major 14er on Saturday + 1 maintenance foothills on Wednesday
-  const maintenanceHikes = [
-    foothills[3], foothills[4], foothills[5], foothills[6], foothills[7],
-    foothills[3], foothills[5], foothills[7], foothills[8], foothills[9]
-  ];
+  // Rotate through moderate-to-hard foothills for maintenance, no back-to-back repeats
+  const midHikes = foothills.slice(4); // moderate and up
+  const maintenanceHikes = [];
+  for (let i = 0; i < 10; i++) {
+    maintenanceHikes.push(midHikes[i % midHikes.length]);
+  }
 
   for (let w = 0; w < 10; w++) {
     const weekStart = addDays(weekOneMonday, (9 + w) * 7);

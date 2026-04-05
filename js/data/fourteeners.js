@@ -1,0 +1,236 @@
+// Real Colorado 14ers — ordered easy to hard
+// Each hike has hand-authored segments based on actual standard route profiles
+
+export const fourteenerHikes = [
+  {
+    id: "grays-peak",
+    name: "Grays Peak",
+    location: "Guanella Pass, CO",
+    category: "fourteener",
+    distance: 7.0,
+    elevationGain: 2850,
+    startElevation: 11280,
+    summitElevation: 14270,
+    class: 1,
+    difficulty: 1,
+    description: "One of the most accessible 14ers. Straightforward Class 1 trail an hour from Denver.",
+    segments: [
+      { name: "Stevens Gulch Approach", distanceMi: 1.0, elevationChangeFt: 300, terrain: "flat" },
+      { name: "Valley Floor to Basin", distanceMi: 1.0, elevationChangeFt: 500, terrain: "moderate" },
+      { name: "Basin Switchbacks", distanceMi: 0.8, elevationChangeFt: 700, terrain: "steep" },
+      { name: "Upper Ridge Climb", distanceMi: 0.5, elevationChangeFt: 600, terrain: "very_steep" },
+      { name: "Summit Push", distanceMi: 0.2, elevationChangeFt: 350, terrain: "very_steep" },
+      { name: "Descent to Basin", distanceMi: 1.5, elevationChangeFt: -1650, terrain: "descent" },
+      { name: "Valley Return", distanceMi: 2.0, elevationChangeFt: -800, terrain: "descent" }
+    ]
+  },
+  {
+    id: "quandary-peak",
+    name: "Quandary Peak",
+    location: "Breckenridge, CO",
+    category: "fourteener",
+    distance: 6.75,
+    elevationGain: 3450,
+    startElevation: 10850,
+    summitElevation: 14271,
+    class: 1,
+    difficulty: 2,
+    description: "Most-hiked 14er in Colorado. Well-maintained trail with steady climbing above treeline.",
+    segments: [
+      { name: "Trailhead Through Forest", distanceMi: 1.0, elevationChangeFt: 600, terrain: "moderate" },
+      { name: "Treeline Transition", distanceMi: 0.7, elevationChangeFt: 500, terrain: "steep" },
+      { name: "East Ridge Lower", distanceMi: 0.8, elevationChangeFt: 700, terrain: "steep" },
+      { name: "East Ridge Upper", distanceMi: 0.6, elevationChangeFt: 800, terrain: "very_steep" },
+      { name: "Summit Block", distanceMi: 0.3, elevationChangeFt: 450, terrain: "very_steep" },
+      { name: "Upper Descent", distanceMi: 1.5, elevationChangeFt: -1950, terrain: "descent" },
+      { name: "Forest Return", distanceMi: 1.85, elevationChangeFt: -1100, terrain: "descent" }
+    ]
+  },
+  {
+    id: "handies-peak",
+    name: "Handies Peak",
+    location: "Lake City, CO",
+    category: "fourteener",
+    distance: 6.0,
+    elevationGain: 3000,
+    startElevation: 10800,
+    summitElevation: 14048,
+    class: 2,
+    difficulty: 3,
+    description: "Beautiful alpine lake scenery with moderate Class 2 climbing. Remote San Juan location.",
+    segments: [
+      { name: "American Basin Approach", distanceMi: 0.8, elevationChangeFt: 200, terrain: "flat" },
+      { name: "Basin to Saddle", distanceMi: 0.8, elevationChangeFt: 800, terrain: "steep" },
+      { name: "Saddle Traverse", distanceMi: 0.4, elevationChangeFt: 300, terrain: "moderate" },
+      { name: "Upper Mountain Climb", distanceMi: 0.6, elevationChangeFt: 900, terrain: "very_steep" },
+      { name: "Summit Ridge", distanceMi: 0.4, elevationChangeFt: 500, terrain: "very_steep" },
+      { name: "Descent", distanceMi: 3.0, elevationChangeFt: -3000, terrain: "descent" }
+    ]
+  },
+  {
+    id: "mt-bierstadt",
+    name: "Mt. Bierstadt",
+    location: "Guanella Pass, CO",
+    category: "fourteener",
+    distance: 7.25,
+    elevationGain: 2430,
+    startElevation: 11669,
+    summitElevation: 14065,
+    class: 2,
+    difficulty: 4,
+    description: "Closest 14er to Denver. Starts above treeline with willows, then a steady climb to the summit.",
+    segments: [
+      { name: "Guanella Pass to Willows", distanceMi: 1.2, elevationChangeFt: -100, terrain: "descent" },
+      { name: "Willow Crossing", distanceMi: 0.5, elevationChangeFt: 100, terrain: "flat" },
+      { name: "Lower Slopes", distanceMi: 0.8, elevationChangeFt: 500, terrain: "moderate" },
+      { name: "West Slope Climb", distanceMi: 0.8, elevationChangeFt: 800, terrain: "steep" },
+      { name: "Upper Ridge", distanceMi: 0.5, elevationChangeFt: 700, terrain: "very_steep" },
+      { name: "Summit Push", distanceMi: 0.3, elevationChangeFt: 430, terrain: "very_steep" },
+      { name: "Descent to Willows", distanceMi: 2.2, elevationChangeFt: -2530, terrain: "descent" },
+      { name: "Willows to Trailhead", distanceMi: 0.95, elevationChangeFt: 100, terrain: "flat" }
+    ]
+  },
+  {
+    id: "torreys-peak",
+    name: "Torreys Peak",
+    location: "Guanella Pass, CO",
+    category: "fourteener",
+    distance: 8.4,
+    elevationGain: 3000,
+    startElevation: 11280,
+    summitElevation: 14275,
+    class: 2,
+    difficulty: 5,
+    description: "Often paired with Grays Peak. Class 2 ridge traverse adds technical challenge.",
+    segments: [
+      { name: "Stevens Gulch Approach", distanceMi: 1.0, elevationChangeFt: 300, terrain: "flat" },
+      { name: "Valley to Grays Saddle", distanceMi: 1.2, elevationChangeFt: 800, terrain: "moderate" },
+      { name: "Grays-Torreys Saddle Climb", distanceMi: 0.8, elevationChangeFt: 600, terrain: "steep" },
+      { name: "Kelso Ridge Traverse", distanceMi: 0.5, elevationChangeFt: 400, terrain: "steep" },
+      { name: "Torreys Summit Push", distanceMi: 0.4, elevationChangeFt: 500, terrain: "very_steep" },
+      { name: "Summit Block Scramble", distanceMi: 0.2, elevationChangeFt: 200, terrain: "very_steep" },
+      { name: "Descent via Standard", distanceMi: 2.0, elevationChangeFt: -1900, terrain: "descent" },
+      { name: "Valley Return", distanceMi: 2.3, elevationChangeFt: -1100, terrain: "descent" }
+    ]
+  },
+  {
+    id: "mt-elbert",
+    name: "Mt. Elbert",
+    location: "Twin Lakes / Leadville, CO",
+    category: "fourteener",
+    distance: 9.5,
+    elevationGain: 4500,
+    startElevation: 10040,
+    summitElevation: 14440,
+    class: 2,
+    difficulty: 6,
+    description: "Highest peak in Colorado at 14,440 ft. Long, grinding climb through forest then above treeline.",
+    segments: [
+      { name: "North Trailhead Forest", distanceMi: 1.5, elevationChangeFt: 600, terrain: "moderate" },
+      { name: "Forest Switchbacks", distanceMi: 1.2, elevationChangeFt: 900, terrain: "steep" },
+      { name: "Treeline Break", distanceMi: 0.8, elevationChangeFt: 700, terrain: "steep" },
+      { name: "Northeast Ridge", distanceMi: 0.8, elevationChangeFt: 800, terrain: "very_steep" },
+      { name: "False Summit", distanceMi: 0.5, elevationChangeFt: 600, terrain: "very_steep" },
+      { name: "Summit Ridge", distanceMi: 0.3, elevationChangeFt: 400, terrain: "very_steep" },
+      { name: "Upper Descent", distanceMi: 2.0, elevationChangeFt: -2500, terrain: "descent" },
+      { name: "Forest Descent", distanceMi: 2.4, elevationChangeFt: -1500, terrain: "descent" }
+    ]
+  },
+  {
+    id: "decalibron",
+    name: "DeCaLiBron Loop",
+    location: "Kite Lake, near Alma, CO",
+    category: "fourteener",
+    distance: 7.0,
+    elevationGain: 3300,
+    startElevation: 12000,
+    summitElevation: 14291,
+    class: 2,
+    difficulty: 7,
+    description: "Four 14ers in one loop: Democrat, Cameron, Lincoln, Bross. Sustained high-altitude effort.",
+    segments: [
+      { name: "Kite Lake to Democrat", distanceMi: 1.0, elevationChangeFt: 700, terrain: "steep" },
+      { name: "Democrat Summit Push", distanceMi: 0.5, elevationChangeFt: 500, terrain: "very_steep" },
+      { name: "Democrat to Cameron Saddle", distanceMi: 0.5, elevationChangeFt: -300, terrain: "descent" },
+      { name: "Cameron Climb", distanceMi: 0.4, elevationChangeFt: 500, terrain: "very_steep" },
+      { name: "Cameron to Lincoln", distanceMi: 0.6, elevationChangeFt: 200, terrain: "moderate" },
+      { name: "Lincoln Summit", distanceMi: 0.3, elevationChangeFt: 400, terrain: "very_steep" },
+      { name: "Lincoln to Bross", distanceMi: 0.7, elevationChangeFt: 300, terrain: "moderate" },
+      { name: "Bross Summit", distanceMi: 0.3, elevationChangeFt: 300, terrain: "steep" },
+      { name: "Bross Descent to Kite Lake", distanceMi: 2.7, elevationChangeFt: -2600, terrain: "descent" }
+    ]
+  },
+  {
+    id: "castle-peak",
+    name: "Castle Peak",
+    location: "Elk Mountains, near Aspen, CO",
+    category: "fourteener",
+    distance: 13.0,
+    elevationGain: 4400,
+    startElevation: 9800,
+    summitElevation: 14265,
+    class: 2,
+    difficulty: 8,
+    description: "Highest in the Elk Range. Long approach through beautiful Montezuma Basin with scree fields.",
+    segments: [
+      { name: "Castle Creek Road Walk", distanceMi: 2.0, elevationChangeFt: 400, terrain: "flat" },
+      { name: "Montezuma Basin Approach", distanceMi: 1.5, elevationChangeFt: 800, terrain: "moderate" },
+      { name: "Basin to Saddle", distanceMi: 1.2, elevationChangeFt: 1000, terrain: "steep" },
+      { name: "Northwest Ridge Climb", distanceMi: 0.8, elevationChangeFt: 900, terrain: "very_steep" },
+      { name: "Scree Field", distanceMi: 0.5, elevationChangeFt: 600, terrain: "very_steep" },
+      { name: "Summit Block", distanceMi: 0.3, elevationChangeFt: 400, terrain: "very_steep" },
+      { name: "Upper Descent", distanceMi: 2.5, elevationChangeFt: -2900, terrain: "descent" },
+      { name: "Basin and Road Return", distanceMi: 4.2, elevationChangeFt: -1200, terrain: "descent" }
+    ]
+  },
+  {
+    id: "snowmass-mountain",
+    name: "Snowmass Mountain",
+    location: "Maroon Bells, near Aspen, CO",
+    category: "fourteener",
+    distance: 22.0,
+    elevationGain: 5500,
+    startElevation: 9580,
+    summitElevation: 14092,
+    class: 2,
+    difficulty: 9,
+    description: "Most remote 14er. Multi-day approach through Snowmass Lake basin. Sustained, committing effort.",
+    segments: [
+      { name: "Snowmass Creek Trail", distanceMi: 4.0, elevationChangeFt: 800, terrain: "flat" },
+      { name: "Forest Climb to Lake", distanceMi: 2.0, elevationChangeFt: 1200, terrain: "moderate" },
+      { name: "Snowmass Lake Basin", distanceMi: 1.5, elevationChangeFt: 500, terrain: "moderate" },
+      { name: "S-Ridge Approach", distanceMi: 1.0, elevationChangeFt: 800, terrain: "steep" },
+      { name: "S-Ridge Climb", distanceMi: 0.8, elevationChangeFt: 1000, terrain: "very_steep" },
+      { name: "Upper Ridge to Summit", distanceMi: 0.5, elevationChangeFt: 700, terrain: "very_steep" },
+      { name: "Summit Scramble", distanceMi: 0.2, elevationChangeFt: 300, terrain: "very_steep" },
+      { name: "Descent to Lake", distanceMi: 3.5, elevationChangeFt: -3300, terrain: "descent" },
+      { name: "Lake to Trailhead", distanceMi: 8.5, elevationChangeFt: -2000, terrain: "descent" }
+    ]
+  },
+  {
+    id: "longs-peak",
+    name: "Longs Peak",
+    location: "Rocky Mountain National Park, CO",
+    category: "fourteener",
+    distance: 15.0,
+    elevationGain: 5370,
+    startElevation: 9400,
+    summitElevation: 14259,
+    class: 3,
+    difficulty: 10,
+    description: "Colorado's most challenging standard 14er. The Keyhole Route involves exposed Class 3 scrambling, the Narrows, the Trough, and the Homestretch.",
+    segments: [
+      { name: "Longs Peak Trail Start", distanceMi: 2.5, elevationChangeFt: 1000, terrain: "moderate" },
+      { name: "Alpine Zone to Granite Pass", distanceMi: 1.5, elevationChangeFt: 800, terrain: "moderate" },
+      { name: "Boulder Field", distanceMi: 1.0, elevationChangeFt: 700, terrain: "steep" },
+      { name: "The Keyhole Climb", distanceMi: 0.5, elevationChangeFt: 600, terrain: "very_steep" },
+      { name: "The Ledges Traverse", distanceMi: 0.3, elevationChangeFt: 200, terrain: "moderate" },
+      { name: "The Trough", distanceMi: 0.4, elevationChangeFt: 800, terrain: "very_steep" },
+      { name: "The Narrows", distanceMi: 0.2, elevationChangeFt: 200, terrain: "moderate" },
+      { name: "The Homestretch", distanceMi: 0.3, elevationChangeFt: 600, terrain: "very_steep" },
+      { name: "Summit Push", distanceMi: 0.1, elevationChangeFt: 170, terrain: "very_steep" },
+      { name: "Descent to Boulder Field", distanceMi: 2.0, elevationChangeFt: -2570, terrain: "descent" },
+      { name: "Descent to Trailhead", distanceMi: 6.2, elevationChangeFt: -2800, terrain: "descent" }
+    ]
+  }
+];
